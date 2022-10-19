@@ -24,7 +24,7 @@ def addWorklogData(user, date, dayType, location, notes):
     hasDateData = utils.getUserDateData(user, date)
     
     if hasDateData:
-        return jsonify({"error": "Data already exists for date given"}), 400
+        return jsonify({"error(dupulicate)": "Data already exists for date given"}), 400
         
     utils.addUserWorkLogData(user, date, dayType, location, notes)
     
